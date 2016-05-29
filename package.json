@@ -1,23 +1,23 @@
 {
-  "name": "grunt-i18n-template",
+  "name": "grunt-i18n-template-jsf",
   "description": "Automate generation of translated HTML files from templates",
   "version": "0.1.8",
-  "homepage": "https://github.com/rmemoria/grunt-i18n-template",
+  "homepage": "https://github.com/gfrde/grunt-i18n-template-jsf",
   "author": {
-    "name": "Ricardo Memoria",
-    "email": "rmemoria@gmail.com"
+    "name": "Georg Fries",
+    "email": "hidden"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rmemoria/grunt-i18n-template.git"
+    "url": "git://github.com/gfrde/grunt-i18n-template-jsf.git"
   },
   "bugs": {
-    "url": "https://github.com/rmemoria/grunt-i18n-template/issues"
+    "url": "https://github.com/gfrde/grunt-i18n-template-jsf/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/rmemoria/grunt-i18n-template/blob/master/LICENSE-MIT"
+      "url": "https://github.com/gfrde/grunt-i18n-template-jsf/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {

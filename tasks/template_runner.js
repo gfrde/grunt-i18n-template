@@ -120,11 +120,13 @@ exports.run = function(grunt, options, files) {
 		// read template file
 		var template = grunt.file.read(filepath);
 		// read keys from template
-		var keys = template.match(/\[\[.+?\]\]/ig);
+		//var keys = template.match(/\[\[.+?\]\]/ig);
+		var keys = template.match(/#\{.+?\}/ig);
 
 		if (keys) {
 			keys.forEach(function(key) {
-				key = key.substring(2, key.length-2);
+//				key = key.substring(2, key.length-2);
+                                key = key.substring(2, key.length-1);
 				var msg;
 				if (msgs)  {
 					msg = msgs[key];
@@ -133,7 +135,8 @@ exports.run = function(grunt, options, files) {
 					msg = key;
 				}
        msg = options.htmlEscape ? commons.escapeHTML(msg) : msg;
-				template = template.split('[[' + key + ']]').join(msg);
+				//template = template.split('[[' + key + ']]').join(msg);
+                                template = template.split('#{' + key + '}').join(msg);
 			});
 		}
 

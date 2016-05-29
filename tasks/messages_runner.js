@@ -73,11 +73,13 @@ exports.run = function(grunt, options, files) {
 	function readKeysFromTemplateFile(filepath, keys) {
 		var template = grunt.file.read(filepath);
 
-		var templkeys = template.match(/\[\[.+?\]\]/ig);
+//		var templkeys = template.match(/\[\[.+?\]\]/ig);
+                var templkeys = template.match(/#\{.+?\}/ig);
 
 		if (templkeys) {
 			templkeys.forEach(function(item) {
-				item = item.substring(2, item.length-2);
+//				item = item.substring(2, item.length-2);
+                                item = item.substring(2, item.length-1);
 				if (keys.indexOf(item) === -1) {
 					keys.push(item);
 				}

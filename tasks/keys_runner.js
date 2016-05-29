@@ -87,11 +87,13 @@ exports.run = function(grunt, options, files, done) {
 		var template = grunt.file.read(filepath);
 		var changed = false;
 		for (var key in diffs) {
-			var actualkey = '[[' + key + ']]';
+//			var actualkey = '[[' + key + ']]';
+                        var actualkey = '#{' + key + '}';
 			// check if the key is in the template
 			if (template.indexOf(actualkey) >= 0) {
 				// update the key in the template
-				var newkey = '[[' + diffs[key] + ']]';
+//				var newkey = '[[' + diffs[key] + ']]';
+                                var newkey = '#{' + diffs[key] + '}';
 				template = commons.replaceAll(template, actualkey, newkey);
 				changed = true;
 			}
